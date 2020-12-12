@@ -26,6 +26,12 @@
             <a href="listarProduto.php">Listar produtos</a>
         </li>
         <li>
+            <a href="cadastroCategoria.php">Cadastrar categoria</a>
+        </li>
+        <li>
+            <a href="listarCategoria.php">Listar categorias</a>
+        </li>
+        <li>
             <a href="#">Mapa de vendas</a>
         </li>
     </ul>
