@@ -13,7 +13,6 @@
         <button type="submit" class="btn btn-primary" onclick="msg()">Submit</button>
         
         </form>
-        <button class="btn btn-primary" onclick="msg()">asd</button>
     </div>
 
 <?php

@@ -9,4 +9,4 @@
     $result = mysqli_query($conn, $query);
 
     
-    header("Location: ../views/cadastroProduto.php?msg=true&produto=$nome");
+    header("Location: ../views/cadastroCategoria.php?msg=true&produto=$nome");

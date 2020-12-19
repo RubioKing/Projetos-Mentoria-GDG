@@ -1,37 +1,25 @@
 <?php
     require_once "header.php";
-    $listaDeCategorias = require "../bd/listarCategoriaBd.php";
+    $categoria = require "../bd/buscarCategoriaId.php";
+    echo '<pre>';
+    print_r($categoria);
+    echo '</pre>';
 ?>
 
 
     <div class="container">
-        <form method="POST" action="../bd/cadastroProdutoBd.php" class="teste">
+        <form method="POST" action="../bd/editarCategoriaBd.php" class="teste">
         <div class="form-group">
-            <label for="nomeProduto">Produto</label>
-            <input type="text" class="form-control" id="nomeProduto" name="nomeProduto" aria-describedby="emailHelp">
+            <label for="idCategoria">Id</label>
+            <input type="text" value="<?= $categoria[0]['id_categorias'] ?>" class="form-control" readonly id="idCategoria" name="idCategoria" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
-            <label for="categoriaProduto">Categoria</label>
-            <select class="form-control" id="categoriaProduto" name="categoriaProduto">
-                <?php foreach ($listaDeCategorias as $key => $value) { ?>
-                <option value="<?= $value['id_categorias']?>"><?= $value['nome_categoria']?></option>
-                <?php } ?>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="quantidadeProduto">Quantidade</label>
-            <input type="number" class="form-control" id="quantidadeProduto" name="quantidadeProduto">
-        </div>
-        <div class="form-group">
-            <label for="valorProduto">Valor</label>
-            <input type="text" class="form-control" id="valorProduto" name="valorProduto">
-        </div>
-        <div class="form-group form-check">
+            <label for="nomeCategoria">Categoria</label>
+            <input type="text" value="<?= $categoria[0]['nome_categoria'] ?>" class="form-control" id="nomeCategoria" name="nomeCategoria" aria-describedby="emailHelp">
         </div>
         <button type="submit" class="btn btn-primary" onclick="msg()">Submit</button>
         
         </form>
-
     </div>
 
 <?php

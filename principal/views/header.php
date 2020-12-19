@@ -32,6 +32,9 @@
             <a href="listarCategoria.php">Listar categorias</a>
         </li>
         <li>
+            <a href="editarCategoria.php">Editar categorias</a>
+        </li>
+        <li>
             <a href="#">Mapa de vendas</a>
         </li>
     </ul>
